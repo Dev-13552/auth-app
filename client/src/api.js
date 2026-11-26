@@ -1,22 +1,19 @@
 
-const API_URL = import.meta.env.API_URL || '';
+const API_URL = 'https://auth-app-hrah.onrender.com';
 
 async function request(path, options = {}) {
   const normalizedPath = path.startsWith('/')
     ? path
     : `/${path}`;
 
-  const res = await fetch(
-    `${API_URL}/api${normalizedPath}`,
-    {
-      credentials: 'include',
-      headers: {
-        'Content-Type': 'application/json',
-        ...options.headers,
-      },
-      ...options,
-    }
-  );
+  const res = await fetch(`${API_URL}/api${normalizedPath}`, {
+    credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json',
+      ...options.headers,
+    },
+    ...options,
+  });
 
   const data = await res.json().catch(() => ({}));
 
