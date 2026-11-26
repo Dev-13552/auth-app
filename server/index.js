@@ -12,7 +12,7 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://auth-53u0njzwi-dev-rathours-projects.vercel.app'
+    'https://auth-app-eta-blond.vercel.app'
   ],
   credentials: true,
 }));
