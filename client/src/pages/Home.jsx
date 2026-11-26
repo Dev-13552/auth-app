@@ -23,7 +23,7 @@ export default function Home({ user, setUser }) {
 
   return (
     <div>
-      <h2>Welcome, {user.surname}</h2>
+      <h2>Welcome, {user.username}</h2>
       <p>You are logged in as {user.contact}</p>
 
       {user.hasBiometric ? (

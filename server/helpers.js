@@ -10,7 +10,7 @@ const cleanContact = (text) => String(text || '').trim().toLowerCase().replace(/
 
 const profile = (user) => ({
   contact: user.contact,
-  surname: user.surname,
+  username: user.username,
   hasBiometric: !!user.credential?.id,
 });
 

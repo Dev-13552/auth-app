@@ -24,6 +24,7 @@ export default function App() {
     const check = () =>
       get('/auth/me').catch(() => {
         setUser(null);
+        setShowSignup(false);
         setNotice('You were logged out. Your account may have been opened on another device.');
       });
     window.addEventListener('focus', check);
